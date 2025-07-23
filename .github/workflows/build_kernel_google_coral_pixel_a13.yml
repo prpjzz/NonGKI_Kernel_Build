@@ -37,6 +37,8 @@ jobs:
               SUSFS_UPDATE
               ROM_TEXT
               BOOT_SOURCE
+              AK3_SOURCE
+              AK3_BRANCH
           )
           ls -al ./
 
