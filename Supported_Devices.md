@@ -1,7 +1,7 @@
 **Only Chinese:**  
 | 设备名称 | 地区 | 设备代号 | 内核/作者/名称 | 系统 | Android | 打包方式 | KernelSU | SuSFS | LXC | Syscall Hook | KPM | Re:Kernel | 维护状态 |  
 |----------|----------|----------|----------|----------|----------|----------|----------|----------|----------|----------|----------|----------|----------|  
-| 一加 8  | All | instantnoodle | 4.19/ppajda/XTD | All | 13 | AnyKernel3 | Magic | ✅ | ❌ | ❌ | ❌ | ❌ | Stable |  
+| 一加 8  | All | instantnoodle | 4.19/ppajda/XTD | All | 13 | AnyKernel3 | Magic | ✅ | ❌ | ❌ | ❌ | ❌ | Suspend |  
 | 一加 8  | All | instantnoodle | 4.19/Nameless/Nameless | Nameless 15 | 15 | AnyKernel3 | rsuntk | ✅ | ❌ | ❌ | ❌ | ❌ | Stable |  
 | 一加 8  | All | instantnoodle | 4.19/Rohail33/Realking | OxygenOS/ColorOS 13.1 | 13 | AnyKernel3 | SukiSU(U) | ✅ | ❌ | ❌ | ❌ | ✅ | Suspend |  
 | 小米 Mix2s  | All | polaris | 4.9/Evolution-X-Devices/sdm845 | Evolution X 10.X | 15 | AnyKernel3 | SukiSU(U) | ✅ | ❌ | ❌ | ✅ | ✅ | Stable |  
@@ -14,7 +14,6 @@
 | 红米 Note 7 | All | lavender | 4.4/Stormbreaker/Predator | MIUI 12 | 10 | Boot Image | rsuntk | ❌ | ❌ | ❌ | ❌ | ❌ | Suspend |  
 | 小米 5 | All | gemini | 4.4/crdroidandroid/crdroid | Crdroid 9 | 13 | Anykernel3 | rsuntk | ❌ | ❌ | ❌ | ❌ | ❌ | Suspend |  
 | 谷歌 Pixel 9 Series | All | zumapro | 6.1/kerneltoast/Sultan | Pixel | 15 | Anykernel3 | SukiSU | ✅ | ❌ | ❌ | ❌ | ❌ | Suspend |  
-| 小米 11 (Ultra) | All | star | 5.4/EndCredits/Acetaminophen | HyperOS | 14 | Anykernel3 | rsuntk | ✅ | ❌ | ❌ | ❌ | ❌ | Suspend |  
 | 小米平板 4(Plus) | All | clover | 4.19/pix106/SouthWest | LineageOS 22.1 | 15 | AnyKernel3 | SukiSU(U) | ✅ | ❌ | ❌ | ✅ | ❌ | Stable |  
 | OPPO K9 Pro | CN | PEYM00 | 4.19/nishant6342/(Nothing) | ColorOS 13.1 | 13 | AnyKernel3 | Magic | ❌ | ❌ | ❌ | ❌ | ❌ | Suspend |  
 | LG Nexus 5 | All | hammerhead | 3.4/nacroreiser/LineageOS | LineageOS 22.2 | 15 | AnyKernel3 | SukiSU(U) | ❌ | ❌ | ✅ | ❌ | ❌ | Suspend |  
@@ -60,7 +59,7 @@
   - 小米 11 Ultra 没有进行normal patch，仅仅执行backport patch，因此应该可以在KSU管理器中切换kprobe和模拟手动修补，以及SUS SU应该也能正常工作
   - 小米平板 4(Plus) 基于SukiSU Ultra的KPM功能**未经完整测试**（会显示在管理器中，但未刷入内核模块进行测试）
   - 小米 Mix2s 已移植Cgroup V2，但Cgroup Freezer需要依赖系统额外步骤才能使用且该功能实际执行冻结过程异常，建议使用Cgroup UID
-  - 小米 Mix2s 已使用 Tracepoint Hook
+  - ~~小米 Mix2s 已使用 Tracepoint Hook~~
   - 红米 K40 Gaming 内核与 Poco F3 GT 通用
   - 红米 8 内核与 红米 8a 通用；理论上LineageOS系的系统，只要是4.19内核都通用 (无论是安卓几)
   - 红米 Note 10 Pro 内核与 Poco X3 GT 通用
